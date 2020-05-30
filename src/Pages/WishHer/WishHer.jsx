@@ -107,25 +107,6 @@ class WishHer extends Component {
                                     ],
                                 }}
                             />
-                            {/* <div className="text-area">
-                                <textarea
-                                    required
-                                    name="wish"
-                                    value={wish}
-                                    id=""
-                                    onChange={this.handleChange}
-                                    className={`${wish.length ? 'expand' : null}`}
-                                    cols="100"
-                                    rows="1"
-                                ></textarea>
-                                <label
-                                    className={`${
-                                        wish.length ? 'shrink' : ''
-                                        } form-input-label`}
-                                >
-                                    Write your wish for her.
-                  </label>
-                            </div> */}
                             <div className="buttons">
                                 <CustomButton type="button" onClick={this.handleSubmit}>
                                     Wish Her {isLoading ? <img src={loader} alt="Loader" /> : null}
