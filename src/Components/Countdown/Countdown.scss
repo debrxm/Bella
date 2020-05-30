@@ -1,0 +1,46 @@
+$tablet: 850px;
+$smartphone: 500px;
+$primaryColor: #000000;
+$secondaryColor: #ffffff;
+
+// Mixin
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin smartphone {
+  @media (max-width: #{$smartphone}) {
+    @content;
+  }
+}
+
+.countdown {
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+  // padding: 10px;
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border: 1px solid $secondaryColor;
+    .text {
+      // margin-left: 5px;
+      font-size: 14px;
+    }
+    span{
+      color: purple;
+      font-size: 30px;
+      font-weight: 600;
+    }
+  }
+}

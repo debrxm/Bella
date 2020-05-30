@@ -1,0 +1,6 @@
+export const ActionTypes = {
+  SET_CURRENT_USER: 'SET_CURRENT_USER',
+  SET_WISHER: 'SET_WISHER',
+  SET_WISHES: 'SET_WISHES',
+  SET_MEMBERS: 'SET_MEMBERS',
+};

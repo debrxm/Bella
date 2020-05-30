@@ -1,0 +1,33 @@
+.card-preview{
+  cursor: pointer;
+  width: 200px;
+  height: 320px;
+  margin: 10px;
+  text-align: center;
+
+.preview-img{
+  width: 200px;
+  // height: 300px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+ img{
+  height: 100%;
+  width: 100%;
+}
+  .name{
+    color: white;
+  }
+}
+// .aboutImg{
+//   transform: perspective(600px) rotateY(0deg);
+//   background: blue;
+// }
+}
+  .message{
+    // width: 200px;
+    padding: 5px;
+    background-color: #EB8C94;
+    color: #181818;
+  }

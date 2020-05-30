@@ -1,0 +1,61 @@
+$tablet: 850px;
+$smartphone: 500px;
+$primaryColor: #B8C4E0;
+$primaryColor2: #EB8C94;
+$secondaryColor: #ffffff;
+
+// Mixin
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin smartphone {
+  @media (max-width: #{$smartphone}) {
+    @content;
+  }
+}
+.custom-button {
+  min-width: 200px;
+  width: auto;
+  height: 40px;
+  letter-spacing: 0.5px;
+  line-height: 40px;
+  padding: 0px 20px;
+  font-size: 15px;
+  background-color: $primaryColor;
+  color: white;
+  text-transform: capitalize;
+  font-family: 'Open Sans Condensed';
+  font-weight: bolder;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include smartphone(){
+    width: 150px !important;
+  }
+  img {
+    margin-right: 10px;
+  }
+  &:hover {
+    background-color: white;
+    color: #a3a3a3;
+    border: 1px solid #a3a3a3;
+  }
+
+  &.inverted {
+    background-color: $primaryColor2;
+    color: black;
+    border: 1px solid black;
+
+    &:hover {
+      background-color: black;
+      color: $primaryColor2;
+      border-color: $primaryColor2;
+    }
+  }
+}

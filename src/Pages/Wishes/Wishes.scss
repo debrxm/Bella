@@ -1,0 +1,32 @@
+$smartphone: 500px;
+@mixin smartphone {
+  @media (max-width: #{$smartphone}) {
+    @content;
+  }
+}
+.wishes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+}
+.wish-preview{
+    background-color: #0000009d;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .close-icon{
+        cursor: pointer;
+        height: 40px;
+        @include smartphone(){
+            height: 25px;
+        }
+    }
+}
