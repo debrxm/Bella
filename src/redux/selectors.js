@@ -2,6 +2,7 @@ import { createSelector } from 'reselect';
 
 const selectUser = (state) => state.user;
 const selectWisherObj = (state) => state.wisher;
+const selectWishesArr = (state) => state.wishes;
 
 export const selectCurrentUser = createSelector(
   [selectUser],
@@ -12,6 +13,6 @@ export const selectWisher = createSelector(
   (wisher) => wisher.wisher
 );
 export const selectWishes = createSelector(
-  [selectWisherObj],
+  [selectWishesArr],
   (wishes) => wishes.wishes
 );

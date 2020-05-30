@@ -25,7 +25,7 @@ class App extends Component {
   componentDidMount() {
     const wishesRef = firestore
       .collection('wishes')
-      .orderBy('arrange', 'desc');
+      .orderBy('time', 'desc');
     wishesRef.onSnapshot(async (snapshot) => {
       const wishes = [];
       snapshot.docs.forEach((doc) => {

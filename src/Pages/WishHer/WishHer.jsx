@@ -30,8 +30,9 @@ class WishHer extends Component {
         event.preventDefault();
         const { name, wish, selected } = this.state;
         const newTripRef = firestore.collection(`wishes`).doc();
+        const wishObj = { name, wish, selected, time: Date.now() }
         try {
-            await newTripRef.set({ name, wish, selected });
+            await newTripRef.set(wishObj);
             this.setState({ isLoading: true });
             this.setState({ name: '', wish: '', isLoading: false });
             this.props.setWisher({ name, wish })
@@ -46,11 +47,10 @@ class WishHer extends Component {
             errorMessage: '',
         });
     };
-    handleChange(content) {
-        this.setState({ body: content });
+    handleChange = (content) => {
+        this.setState({ wish: content });
     }
     handleSelected = (selected) => {
-
         this.setState({ selected })
     }
     render() {
@@ -102,12 +102,8 @@ class WishHer extends Component {
                                     plugins: plugins,
                                     buttonList: [
                                         ['undo', 'redo'],
-                                        ['bold', 'italic', 'strike', 'subscript', 'superscript'],
-                                        ['align', 'list'],
+                                        ['bold', 'italic'],
                                         ['blockquote'],
-                                        ['outdent', 'indent'],
-                                        ['link', 'image'],
-                                        ['codeView'],
                                     ],
                                 }}
                             />
