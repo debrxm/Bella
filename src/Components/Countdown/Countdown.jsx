@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './Countdown.scss';
 const Countdown = ({ match, handleFireworks }) => {
-  let end = new Date('06/02/2019 12:00 AM');
+  let end = new Date('06/02/2020 12:00 AM');
   let _second = 1000;
   let _minute = _second * 60;
   let _hour = _minute * 60;
