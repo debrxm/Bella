@@ -24,6 +24,7 @@ const Wishes = ({ wishes }) => {
         <>
             <div className="wishes">
                 {wishes.map((item, index) => <CardPreview key={index} data={{ ...item }} handleViewWish={handleViewWish} />)}
+                {wishes.lenght === 0 ? <div className="no-wish"><h4>No wishes yet 😞</h4></div> : null}
             </div>
             {state.data ? <div className="wish-preview">
                 <img src={close} alt="close icon" className="close-icon" onClick={handleHideWish} />

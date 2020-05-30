@@ -10,6 +10,18 @@ $smartphone: 500px;
     justify-content: center;
     margin: auto;
     width: 90%;
+    .no-wish{
+      position: fixed;
+      top: 100px;
+      z-index: 999;
+      h4{
+        color: white;
+        font-size: 22px;
+        @include smartphone(){
+          font-size: 18px;
+        }
+      }
+    }
 }
 .wish-preview{
     background-color: #0000009d;

@@ -7,12 +7,12 @@ $smartphone: 500px;
 .card-preview{
   cursor: pointer;
   width: 200px;
-  height: 320px;
+  height: 300px;
   margin: 0px 10px;
   text-align: center;
   @include smartphone(){
     width: 120px;
-    height: 270px;
+    height: 210px;
   }
 
 .preview-img{
