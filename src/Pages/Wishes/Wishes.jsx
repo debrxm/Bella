@@ -30,7 +30,7 @@ const Wishes = ({ wishes }) => {
                 <img src={close} alt="close icon" className="close-icon" onClick={handleHideWish} />
                 <span style={{ color: '#ffffff' }}>Click / Tap to read wish</span>
                 <Card data={state.data} preview>
-                    {<p>{renderHTML(state.data.wish)}</p>}
+                    {renderHTML(state.data.wish)}
                 </Card>
             </div> : null}
         </>
