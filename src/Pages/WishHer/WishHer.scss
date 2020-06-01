@@ -35,9 +35,13 @@ $smartphone: 500px;
     max-width: 70%;
     width: 100%;
     text-align: center;
+    .label{
+      text-align: left;
+    }
      @include smartphone(){
     max-width: 90%;
   }
+
   }
   .hb-icons{
     display: flex;
@@ -117,6 +121,18 @@ $smartphone: 500px;
               margin-left: 10px;
             }
           }
+          .error {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #EB8C94;
+    color: #181818;
+    padding: 3px 10px;
+    text-align: center;
+    font-weight: 600;
+    z-index: 99;
+  }
 }
 .thanks{
   // width: 100vh;

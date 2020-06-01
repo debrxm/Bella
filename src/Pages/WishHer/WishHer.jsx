@@ -29,6 +29,10 @@ class WishHer extends Component {
     handleSubmit = async (event) => {
         event.preventDefault();
         const { name, wish, selected } = this.state;
+        if (name === '' || wish === '') {
+            this.setState({ errorMessage: 'All fields are required' })
+            return
+        }
         const newTripRef = firestore.collection(`wishes`).doc();
         const wishObj = { name, wish, selected, time: Date.now() }
         try {
@@ -90,8 +94,10 @@ class WishHer extends Component {
                                 handleChange={this.handleInputChange}
                                 label="Enter your name 🙂"
                             />
+                            {/* <span className='label'>Write wish</span> */}
                             <SunEditor
                                 onChange={this.handleChange}
+                                placeholder='Write wish here'
                                 enableToolbar={true}
                                 showToolbar={true}
                                 image={image}
