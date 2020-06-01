@@ -18,7 +18,7 @@ const Card = ({ children, data: { name, selected } }) => {
                 <div className="cardImg">
                     <img src={selected === 'hb3' ? Hb3 : selected === 'hb2' ? Hb2 : Hbone} alt="HB icon" />
                 </div>
-                <div className="cardText" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.7)), url(${selected === 'hb3' ? Hb3 : selected === 'hb2' ? Hb2 : Hbone})` }}>
+                <div className="cardText" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(${selected === 'hb3' ? Hb3 : selected === 'hb2' ? Hb2 : Hbone})` }}>
                     <div className="text">
                         {children}
                     </div>
